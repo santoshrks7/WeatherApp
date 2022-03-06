@@ -12,7 +12,7 @@ window.addEventListener('load',()=>{
             // console.log(position)
             long = position.coords.longitude;
             lat = position.coords.latitude;
-            const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=f21414f7c19ad41c944b081c8f19c015`;
+            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=f21414f7c19ad41c944b081c8f19c015`;
             fetch(api)
                 .then(response =>{
                     return response.json();
@@ -33,7 +33,7 @@ window.addEventListener('load',()=>{
         if(event.keyCode == 13){
         console.log(searchBox.value)
 
-        const apiSearch = `http://api.openweathermap.org/data/2.5/weather?q=${searchBox.value}&appid=f893fe7c43d3509eeaa099f53e4b3a9a&units=metric`;
+        const apiSearch = `https://api.openweathermap.org/data/2.5/weather?q=${searchBox.value}&appid=f893fe7c43d3509eeaa099f53e4b3a9a&units=metric`;
         console.log(apiSearch)
         fetch(apiSearch)
             .then(response =>{
